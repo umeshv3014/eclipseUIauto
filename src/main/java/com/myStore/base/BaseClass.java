@@ -103,7 +103,7 @@ public class BaseClass {
 		return currentDate;
 	}
 
-	@AfterSuite
+	@AfterSuite(groups = { "smoke", "sanity", "regression" })
 	public void afterSuite() {
 		ExtentManager.endReport();
 	}
